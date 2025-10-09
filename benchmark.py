@@ -47,8 +47,6 @@ for prefix in prefixes:
     
     results += [[slow_time, med_time, fast_time]]
 
-df = pd.DataFrame(
-    data=np.array(results)
-)
 
+df = pd.DataFrame(data=np.array(results))
 df.to_csv('benchmark_results.csv')
