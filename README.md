@@ -56,6 +56,7 @@ Above is that markdown extracted from python using the built in `.to_csv()` func
 The largest takeaway from this project is how dramatically algorithm choice impact performance even for something as simple as prefix checking. The slow version will run through multiple layers of loops which adds extra nonsense at every loop iteration. The fast solution uses the built in functions which means it barely has to do any heavy lifting. Choosing a slow algorithm could mean the difference between an instant response and noticeable lag in any program.
 ### Visual Analysis
 ![Prefix Benchmark Comparison Over 10,000 Runs](https://github.com/Vespitalian/prefix-benchmark-cc/blob/main/prefix_benchmark.png)
+
 This chart is a comparison of how long different versions of a loop take to run with different prefixes. It shows which algorithm runs best at different prefix lengths.
 - The slow approach line gets increasingly sharper as the prefixes get longer. 
 - The medium solution grows a bit in the beginning while coasting at ~4.2 from then on. 
