@@ -53,7 +53,7 @@ The code is run 10,000 times for each prefix in the given list `prefixes = ['c',
 
 Above is that markdown extracted from python using the built in `.to_csv()` function that `pandas` has. The data has columns for the times recorded by each method slow, medium, and fast indexed by the tested prefix strings. The results clearly show a massive difference in performance based on the algorithm when looking at larger strings.
 - The time difference shown in the fourth column was calculated using vector subtraction to calculate the time difference across columns. I originally wanted to use it in the graphic somehow but couldn't figure out a nice way to integrate it in without it just appearing to be a parallel line to the slow line.
-- 
+ 
 The largest takeaway from this project is how dramatically algorithm choice impacts performance even for something as simple as prefix checking. The slow version will run through multiple layers of loops which adds extra nonsense at every loop iteration. The fast solution uses the built in functions which means it barely has to do any heavy lifting. Choosing a slow algorithm could mean the difference between an instant response and noticeable lag in any program.
 ### Visual
 ![Prefix Benchmark Comparison Over 10,000 Runs](https://github.com/Vespitalian/prefix-benchmark-cc/blob/main/prefix_benchmark.png)
